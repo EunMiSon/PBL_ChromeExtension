@@ -1,6 +1,6 @@
 {
   "name": "FrequencyOf",
-  "description": "Eunmi's Google extension",
+  "description": "Our First Google Chrome extension",
   "version": "1.0",
   "manifest_version": 2,
 
