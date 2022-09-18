@@ -29,7 +29,8 @@
 	  if(bodyText.match(/고유식별|고유식별정보|민감정보/g) != null)  myNum4 = bodyText.match(/고유식별|고유식별정보|민감정보/g).length;
 
 	  // 위험도 점수 계산
-	  var score = ((myNum1 + myNum2*2 + myNum3*3 + MyNum4*4)/myNum) * 100
+	  var score = ((myNum1*10 + myNum2*20 + myNum3*30 + myNum4*40)/bodyNum) * 100;
+	  score = Math.round((score + Number.EPSILON) * 100) / 100;
 
 	  // id값이 result인 태그에 결과를 추가한다. 
 	  document.querySelector('#result').innerText = bodyText;
