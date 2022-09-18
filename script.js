@@ -28,11 +28,12 @@
 	  if(bodyText.match(/이전|이관|빈도|통계|3자/g) != null)  myNum3 = bodyText.match(/이전|이관|빈도|통계|3자/g).length;
 	  if(bodyText.match(/고유식별|고유식별정보|민감정보/g) != null)  myNum4 = bodyText.match(/고유식별|고유식별정보|민감정보/g).length;
 
+	  // 위험도 점수 계산
+	  var score = ((myNum1 + myNum2*2 + myNum3*3 + MyNum4*4)/myNum) * 100
 
 	  // id값이 result인 태그에 결과를 추가한다. 
 	  document.querySelector('#result').innerText = bodyText;
-
-	  document.querySelector('#test').innerText = "전체 단어 수 : " + bodyNum + ", 위험 키워드 수 : " + myNum;
+	  document.querySelector('#test').innerText = "위험도 점수 : " + score;
    
    
 	});
