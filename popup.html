@@ -1,23 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<script src="script.js" type="text/javascript" charset="utf-8"></script>
 	<style>
-		#result{
-			font-size: 1rem;
-		}
-		#test{
-			font-size: large;
+		#parent {
+    		padding: 15px;
+    	}
+    	#btn1 {
+            margin-bottom: 15px;
+            border: 0;
+            outline: none;
+            font-size: 18px;
+            background: white;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+    	}
+    	#btn1:hover {
+            color: black;
+            background: #e2e2e2;
+    	}
+    	#circle {
+			float: right;
+			border: solid 10px red;
+			line-height : 180px;
+      		margin-bottom: 20px;
+      		text-align: center;
+      		width:180px;
+      		height:180px;
+      		border-radius:50%;
+      		background: white;
+			font-size: 35px;
 			font-weight: bold;
-			color: red;
-		}
+    	} 
+    	#con {
+			font-size: 15px;
+			width: 400px;
+      		height: 200px;
+      		padding: 15px;
+      		margin-bottom: 20px;
+      		background: #f3f3f3;
+      		border-radius: 10px;
+      		overflow-y: scroll;
+    	}
+    	#last {
+      		text-align: center;
+    	}
+    	#btn2 {
+            margin-bottom: 20px;
+            border: 0;
+            outline: none;
+            font-size: 15px;
+            background: #e2e2e2;
+            color: black;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 10px;
+    	}
 	</style>
 </head>
 <body>
-	<h1>PPUPIN_Web</h1>
-	<textarea id="result" rows="20" cols="70"></textarea>
-	<br><br>
-	<div id="test"></div>
-	<br>
+	<div id='parent'>
+		<div>
+			<button id='btn1'>회원가입 약관 분석</button>
+		</div>
+	  
+		<div>
+			<div id='circle'>
+			</div>
+		</div>
+		
+		<div id='con'>
+		</div>
+	
+		<div id='last'>
+			<button id='btn2'>전체 화면으로 보기</button>
+		</div>
+	</div>
 </body>
 </html>
