@@ -14,30 +14,84 @@
 		var bodyNum = bodyText.split(' ').length;
 		//var text = bodyText.split(' ');
   
-		var words = ['이벤트', '광고', '마케팅', '홍보', '푸쉬', '푸시', '권유', '텔레마케팅', '정기결제', '자동납부', '이전', '이관', '빈도', '통계', '3자', '고유식별', '고유식별정보', '민감정보'];  // 필터링할 단어 배열
+		var words4 = ['고유식별', '고유식별정보', '민감정보'];  // 필터링할 단어 배열
+		var words3 = ['이전', '이관', '빈도', '통계', '3자'];
+		var words2 = ['정기결제', '자동납부'];
+		var words1 = ['이벤트', '광고', '마케팅', '홍보', '푸쉬', '푸시', '권유', '텔레마케팅'];
 		var idx = "";  // 필터링할 단어의 시작 위치
 		var start = 0;  // 단어가 들어있는 문장의 시작 위치 (그 문장의 앞 문장의 끝을 .으로 찾음)
 		var end = 0;    // 단어가 들어있는 문장의 끝 위치 (역시 .으로 끝을 찾음)
-		var text = "";  // 찾아낸 문장들
+		var text4 = "", text3 = "", text2 = "", text1 = "";  // 찾아낸 문장들
 		var num = 1;
   
-		for(var i = 0;i<words.length;i++){
+		for(var i = 0;i<words4.length;i++){
 		  var indices = [];
-		  text = text + "<<< " + words[i] + " >>>" + "\n";
-		  idx = bodyText.indexOf(words[i]);
+		  text4 = text4 + "<<< " + words4[i] + " >>>" + "\n";
+		  idx = bodyText.indexOf(words4[i]);
 		  while ( idx != -1 ){
 			  indices.push(idx);
-			  idx = bodyText.indexOf(words[i], idx+1);
+			  idx = bodyText.indexOf(words4[i], idx+1);
 		  }
 			  
 		  for(var j = 0; j < indices.length; j++){
 			  start = bodyText.lastIndexOf(".", indices[j]);
 			  end = bodyText.indexOf(".", start+1);
 				  
-			  text = text + num + " ========" + "\n" + bodyText.substring(start+1, end+1) + "\n\n";
+			  text4 = text4 + num + " ========" + "\n" + bodyText.substring(start+1, end+1) + "\n\n";
 			  num = num + 1;
 		  }
 		}
+		for(var i = 0;i<words3.length;i++){
+			var indices = [];
+			text3 = text3 + "<<< " + words3[i] + " >>>" + "\n";
+			idx = bodyText.indexOf(words3[i]);
+			while ( idx != -1 ){
+				indices.push(idx);
+				idx = bodyText.indexOf(words3[i], idx+1);
+			}
+				
+			for(var j = 0; j < indices.length; j++){
+				start = bodyText.lastIndexOf(".", indices[j]);
+				end = bodyText.indexOf(".", start+1);
+					
+				text3 = text3 + num + " ========" + "\n" + bodyText.substring(start+1, end+1) + "\n\n";
+				num = num + 1;
+			}
+		  }
+		  for(var i = 0;i<words2.length;i++){
+			var indices = [];
+			text2 = text2 + "<<< " + words2[i] + " >>>" + "\n";
+			idx = bodyText.indexOf(words2[i]);
+			while ( idx != -1 ){
+				indices.push(idx);
+				idx = bodyText.indexOf(words2[i], idx+1);
+			}
+				
+			for(var j = 0; j < indices.length; j++){
+				start = bodyText.lastIndexOf(".", indices[j]);
+				end = bodyText.indexOf(".", start+1);
+					
+				text2 = text2 + num + " ========" + "\n" + bodyText.substring(start+1, end+1) + "\n\n";
+				num = num + 1;
+			}
+		  }
+		  for(var i = 0;i<words1.length;i++){
+			var indices = [];
+			text1 = text1 + "<<< " + words1[i] + " >>>" + "\n";
+			idx = bodyText.indexOf(words1[i]);
+			while ( idx != -1 ){
+				indices.push(idx);
+				idx = bodyText.indexOf(words1[i], idx+1);
+			}
+				
+			for(var j = 0; j < indices.length; j++){
+				start = bodyText.lastIndexOf(".", indices[j]);
+				end = bodyText.indexOf(".", start+1);
+					
+				text1 = text1 + num + " ========" + "\n" + bodyText.substring(start+1, end+1) + "\n\n";
+				num = num + 1;
+			}
+		  }
 		  
   
 		var myNum1 = 0;
@@ -58,7 +112,10 @@
 		score = Math.round((score + Number.EPSILON) * 100) / 100;
   
 		// id값이 result인 태그에 결과를 추가한다. 
-		document.querySelector('#con').innerText = text;
+		document.querySelector('#cont4').innerText = text4 + "\n";
+		document.querySelector('#cont3').innerText = text3 + "\n";
+		document.querySelector('#cont2').innerText = text2 + "\n";
+		document.querySelector('#cont1').innerText = text1 + "\n";
 		//document.querySelector('#test').innerText = "전체 단어 수 : " + bodyNum + ", 위험 키워드1 수 : " + myNum1 + ", 위험 키워드2 수 : " + myNum2 + ", 위험 키워드3 수 : " + myNum3 + ", 위험 키워드4 수 : " + myNum4;
 		document.querySelector('#circle').innerText = score;
 	 
