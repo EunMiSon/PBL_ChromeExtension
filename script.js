@@ -119,5 +119,14 @@
 		//document.querySelector('#test').innerText = "전체 단어 수 : " + bodyNum + ", 위험 키워드1 수 : " + myNum1 + ", 위험 키워드2 수 : " + myNum2 + ", 위험 키워드3 수 : " + myNum3 + ", 위험 키워드4 수 : " + myNum4;
 		document.querySelector('#circle').innerText = score;
 	 
-	 
+		document.addEventListener("DOMContentLoaded", function(){
+			var btn = document.getElementById("btn2");
+			btn.addEventListener("click", function(){
+				window.open('next.html');
+			});
+		});
+		localStorage.setItem('level4',text4);
+		localStorage.setItem('level3',text3);
+		localStorage.setItem('level2',text2);
+		localStorage.setItem('level1',text1);
 	  });
