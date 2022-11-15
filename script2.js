@@ -1,17 +1,27 @@
+var r1 = 'X';
+var r2 = 'X';
+var r3 = 'X';
+var r4 = 'X';
+var r5 = 'X';
 
-if(localStorage.getItem('level4')){
-	var level4 = localStorage.getItem('level4')
+if(localStorage.getItem('s1') == 20){
+	r1 = 'O';
 }
-if(localStorage.getItem('level3')){
-	var level3 = localStorage.getItem('level3')
+if(localStorage.getItem('s2') == 20){
+	r2 = 'O';
 }
-if(localStorage.getItem('level2')){
-	var level2 = localStorage.getItem('level2')
+if(localStorage.getItem('s3') == 20){
+	r3 = 'O';
 }
-if(localStorage.getItem('level1')){
-    var level1 = localStorage.getItem('level1')
+if(localStorage.getItem('s4') == 20){
+	r4 = 'O';
 }
-document.querySelector('#cont4').innerText = level4 + "\n";
-document.querySelector('#cont3').innerText = level3 + "\n";
-document.querySelector('#cont1').innerText = level2 + "\n";
-document.querySelector('#cont2').innerText = level1 + "\n";
+if(localStorage.getItem('s5') == 20){
+	r5 = 'O';
+}
+
+document.querySelector('#ox1').innerText = "......... " + r1;
+document.querySelector('#ox2').innerText = "......... " + r2;
+document.querySelector('#ox3').innerText = "......... " + r3;
+document.querySelector('#ox4').innerText = "......... " + r4;
+document.querySelector('#ox5').innerText = "......... " + r5;
