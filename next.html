@@ -2,49 +2,234 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link  rel="stylesheet" href="style.css">
-    <title>PPUPIN - 전체화면</title>
+	<title>PPUPIN - 전체화면</title>
+	<style>
+		.main_div{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin:-320px 0px 0px -655px;
+		}
+		.inner_div{
+			float: left;
+			text-align: center;
+		}
+		#circle{
+			width: 175px;
+			height: 175px;
+			border-radius: 50%;
+			border: solid 15px red;
+			display: inline-block;
+			font-size: 65px;
+			font-weight: bold;
+			line-height: 175px;
+			margin: 15px 0px 10px 0px;
+		}
+		.gray_box{
+			background: #f3f3f3;
+			border-radius: 10px;
+			display: inline-block;
+			margin: 10px;
+			padding: 15px;
+			font-size: 16px;
+		}
+		.ox{
+			color: red;
+			font-weight: bold;
+			font-size: 30px;
+		}
+		#table2 td {padding: 10px;}
+		img {
+			display : block;
+			margin : auto;
+		}
+		
+	</style>
 </head>
 <body>
-	<div id='parent'>
-		<div style="text-align: center;">
-			<button id='btn1'>회원가입 약관 분석</button>
+	<div class="main_div" style="width: 1310px; height: 640px;">
+		<div class="inner_div" style="width: 379px; height: 640px; border-right: solid 1px black;">
+			<div id="circle"> 29 </div>
+			<div id="status_text" style="font-size: 25px; color: red; font-weight: bold;"></div><br><br>
+			<div class="gray_box" style="background: white; width: 240px; height: 110px;"> PPUPIN(퍼핀)은<br>개인정보수집이용약관이<br>
+				최신 개인정보보호법과<br>가이드라인을 준수하는지<br>
+				확인할 수 있게 해주어 <br>사용자의 개인정보보호를 돕는 <br>서비스 입니다.
+			</div>
+			<br><br><br><br>
+			<img src="logo.png" alt="" height="80">
+			<font size="5"><b>PPUPIN</b></font>
 		</div>
-		
-		<div id='con' style="width: 800px; height: 150px; margin: auto; overflow:hidden;">
-			<div id='top'>약관의 구체성 평가</div>
-			<br/>
-			<hr/>
-			<div>
-				<div class='content' style="width: 610px;">1.개인정보 수집 이용 동의서가 존재하는가?</div>
-				<div class='ox' id='ox1' style="width: 130px;"></div>
+		<div class="inner_div" style="width: 930px; height: 640px;">
+			<div class="gray_box" style="width: 800px; height: 270px;">
+				<div style="font-weight: bold;">약관의 완성도</div><hr>
+				<div>
+					<table id="table1" style="width: 800px;">
+						<tr>
+							<td align="left" width="75%">1. 개인정보 수집 이용동의서가 개인정보처리방침과 별도로 존재하는가?<br> </td>
+							<td width="10%">----------</td>
+							<td class="ox">O</td>
+						</tr>
+						<tr>
+							<td align="left">2. 개인정보의 처리 목적이 약관에 구체적으로 정확하게 명시되어있는가?</td>
+							<td>----------</td>
+							<td class="ox">X</td>
+						</tr>
+						<tr>
+							<td align="left">3. 개인정보 보유 및 이용기간이 포함되어있는가?</td>
+							<td>----------</td>
+							<td class="ox">X</td>
+						</tr>
+						<tr>
+							<td align="left">4. 수집하는 개인정보 항목이 구체적으로 명시되어있는가?</td>
+							<td>----------</td>
+							<td class="ox">X</td>
+						</tr>
+						<tr>
+							<td align="left">5. 수집하는 항목 중 고유식별정보(주민등록번호, 여권번호, 운전면허번호,  <br>외국인등록번호)가 없거나, 있을 경우 고유식별정보임을 표기하고 있는가?</td>
+							<td>----------</td>
+							<td class="ox">X</td>
+						</tr>
+					</table>
+				</div>
 			</div>
-            <div>
-				<div class='content' style="width: 610px;">2.개인정보의 처리 목적이 명시되어 있는가?</div>
-				<div class='ox' id='ox2' style="width: 130px;"></div>
-			</div>
-            <div>
-				<div class='content' style="width: 610px;">3.개인정보의 처리 및 보유 기간이 명시되어 있는가?</div>
-				<div class='ox' id='ox3' style="width: 130px;"></div>
-			</div>
-            <div>
-				<div class='content' style="width: 610px;">4.처리하는 개인정보의 항목이 명시되어 있는가?</div>
-				<div class='ox' id='ox4' style="width: 130px;"></div>
-			</div>
-            <div>
-				<div class='content' style="width: 610px;">5. 수집하는 항목 중 고유식별정보가 없거나, 있을 경우 고유식별정보임을 표기하고 있는가?</div>
-				<div class='ox' id='ox5' style="width: 130px;"></div>
-			</div>
-		</div>
-        <div> <br/></div>
-        
-        <div id='con' style="width: 800px; height: 250px; margin: auto;">
-			<div id='top'>위험 단어 설명이나 그 외 위험 요소들 설명</div>
-			<br/>
-			<hr/>
-			<div>
-				약관에 나온 위험 단어들에 대한 설명만 나열하는 건 😵‍💫 <br>
-                모든 설명 다 넣는 것이..🐤
+			<div class="gray_box" style="width: 800px; height: 270px; overflow-y: scroll; overflow-x: hidden;">
+				<div style="width: 200px; font-weight: bold; float: left;">위험 단어</div>
+				<div style="width: 570px; font-weight: bold; float: left;">이유</div><br><hr>
+				<div>
+					<table id="table2" style="width: 800px;">
+						<tr>
+							<td width="25%">위탁</td>
+							<td align="left"></td>
+						</tr>
+						<tr>
+							<td width="25%">제3자 제공</td>
+							<td align="left"></td>
+						</tr>
+						<tr>
+							<td>로그</td>
+							<td align="left"></td>
+						</tr>
+						<tr>
+							<td>쿠키</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td>
+						</tr>
+						<tr>
+							<td>맞춤식 서비스</td>
+							<td align="left">X</td> <!--32-->
+						</tr>
+						<tr>
+							<td colspan="2">'인종, 민족, 종교, 노동 조합, 유전, 정당, 정치, 성생활, 지문, 얼굴, 홍채, 망막, 정맥, 장문, 귓바퀴, 뇌파, 심전도, 유전정보, 음성, 필적, 걸음걸이, 자판 입력'은 민감정보에 해당하는 정보이다. 이용자의 사생활 침해 우려가 있어 해당 프로그램을 사용할 시 실제로 필요한 정보인지 다시 한번 확인이 필요하다.</td>
+						</tr>
+					</table>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -27,7 +27,7 @@
 		}else{
 			warning = warning + '❗ 본 사이트는 개인 정보의 수집 및 이용 동의를 받지 않습니다.\n';
 		}
-		if(bodyText.match(/개인정보의 수집 이용 목적|개인정보의 수집 목적 및 이용 목적|개인정보 수집 목적|개인정보 수집, 이용 목적|수집하는 개인정보 및 이용 목적|수집하는 개인정보 항목 및 이용 목적|개인정보의 수집 및 이용 목적|개인정보의 수집 이용 목적|개인정보의 수집, 이용 목적|개인정보 수집, 이용 항목 및 목적|수집 및 이용 목적|수집하는 개인정보 항목, 목적|개인정보 수집 목적|개인정보의 수집 이용 목적|수집한 개인정보의 이용/g) != null){
+		if(bodyText.match(/개인정보의 수집 이용 목적|개인정보의 수집 목적 및 이용 목적|개인정보 수집 목적|개인정보 수집, 이용 목적|수집하는 개인정보 및 이용 목적|수집하는 개인정보 항목 및 이용 목적|개인정보의 수집 및 이용 목적|개인정보의 수집 및 이용목적|개인정보의 수집 이용 목적|개인정보의 수집, 이용 목적|개인정보 수집, 이용 항목 및 목적|수집 및 이용 목적|수집하는 개인정보 항목, 목적|개인정보 수집 목적|개인정보의 수집 이용 목적|수집한 개인정보의 이용/g) != null){
 			s2 = 20;
 		}else{
 			warning = warning + '❗ 본 사이트는 개인 정보의 수집 및 이용의 목적을 밝히지 않습니다.\n';
@@ -50,6 +50,7 @@
 		}
 
 		var score = s1 + s2 + s3 + s4 + s5;
+		if(score == 100) warning = '본 사이트의 약관은 완성도가 높습니다.'
 
 		/* 위험도 키워드 필터링 */
 
@@ -72,7 +73,7 @@
 			var indices = [];
 			idx = bodyText.indexOf(basic[i]);
 			if( idx != -1 ){
-				basicText = basicText + "<<< " + basic[i] + " >>>" + "\n";
+				basicText = basicText + "✔️ " + basic[i] + "\n";
 				score = score - 2;
 			}
 			while ( idx != -1 ){
@@ -93,7 +94,7 @@
 			var indices = [];
 			idx = bodyText.indexOf(sensitive[i]);
 			if( idx != -1 ){
-				sensText = sensText + "<<< " + sensitive[i] + " >>>" + "\n";
+				sensText = sensText + "✔️ " + sensitive[i] + "\n";
 				score = score - 4;
 			}
 			while ( idx != -1 ){
@@ -111,13 +112,13 @@
 		}
   
 		if(score<=30) {
-			document.getElementById("circle").style.borderColor = "red";
+			document.getElementById("circle").style.borderColor = "#EB274C";
 		}
 		else if(score<=70) {
-			document.getElementById("circle").style.borderColor = "yellow";
+			document.getElementById("circle").style.borderColor = "#FFC041";
 		}
 		else {
-			document.getElementById("circle").style.borderColor = "green";
+			document.getElementById("circle").style.borderColor = "#4CD964";
 		}
 
 		// id값이 result인 태그에 결과를 추가한다. 
@@ -126,7 +127,7 @@
 		document.querySelector('#cont4').innerText = basicText + "\n" + sensText + "\n";
 
 		document.addEventListener("DOMContentLoaded", function(){
-			var btn = document.getElementById("btn2");
+			var btn = document.getElementById("btn");
 			btn.addEventListener("click", function(){
 				window.open('next.html');
 			});
@@ -137,5 +138,6 @@
 		localStorage.setItem('s3',s3);
 		localStorage.setItem('s4',s4);
 		localStorage.setItem('s5',s5);
+		localStorage.setItem('score',score);
 
 	  });

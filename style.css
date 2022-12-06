@@ -3,54 +3,44 @@
 #parent {
     padding: 15px;
 }
-#btn1 {
-    margin-bottom: 15px;
-    border: 0;
-    outline: none;
+#btn {
+    margin-bottom: 20px;
+    border: 2px solid #a3a1a1;
     font-size: 17px;
-    font-weight: bold;
     background: white;
-    color: black;
-    padding: 10px;
+    padding: 7px 30px 7px 30px;
     cursor: pointer;
     border-radius: 10px;
 }
+#btn:hover{
+    color: white;
+    background: #a3a1a1;
+}
 #circle {
-    float: right;
     border: solid 12px red;
     line-height : 130px;
-      margin-bottom: 20px;
-      text-align: center;
-      width:130px;
-      height:130px;
-      border-radius:50%;
-      background: white;
-    font-size: 35px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: center;
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    background: white;
+    font-size: 45px;
     font-weight: bold;
 } 
 #con {
     font-size: 15px;
     width: 400px;
-      height: 100px;
-      padding: 15px;
-      margin-bottom: 20px;
-      background: #f3f3f3;
-      border-radius: 10px;
-      overflow-y: scroll;
+    height: 100px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    overflow-y: scroll;
 }
 #last {
       text-align: center;
-}
-#btn2 {
-    margin-bottom: 20px;
-    border: 0;
-    outline: none;
-    font-size: 15px;
-    background: #e2e2e2;
-    color: black;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 10px;
 }
 #top{
     float: left;
@@ -62,4 +52,22 @@
 }
 .ox{
     float: right;
+}
+.btn1 {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.btn2 {
+    border: 3px solid #a3a1a1;
+    color: #6e6e6e;
+}
+.btn2:hover {
+    background-color: #a3a1a1;
+    color: #e3dede;
 }
