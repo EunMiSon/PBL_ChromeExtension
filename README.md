@@ -1,4 +1,4 @@
-# PBL_ChromeExtension_Web
+# PBL_PPUPIN
 
 PPUPIN(퍼핀)은
 개인정보수집이용약관이
