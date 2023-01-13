@@ -51,7 +51,10 @@
     float: left;
 }
 .ox{
-    float: right;
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
 }
 .btn1 {
     position: relative;
@@ -70,4 +73,17 @@
 .btn2:hover {
     background-color: #a3a1a1;
     color: #e3dede;
+}
+table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+th, td {
+    border-bottom: 1px solid #a3a1a1;
+    border-left: 1px solid #a3a1a1;
+    padding: 10px;
+}
+  th:first-child, td:first-child {
+    border-left: none;
 }

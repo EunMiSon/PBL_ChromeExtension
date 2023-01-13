@@ -38,7 +38,7 @@
 			font-weight: bold;
 			font-size: 30px;
 		}
-		#table2 td {padding: 10px;}
+		#table2 td {padding: 5px;}
 		img {
 			display : block;
 			margin : auto;
@@ -47,8 +47,8 @@
 	</style>
 </head>
 <body>
-	<div class="main_div" style="width: 1310px; height: 640px;">
-		<div class="inner_div" style="width: 379px; height: 640px; border-right: solid 1px black;">
+	<div class="main_div" style="width: 1310px; height: 1000px;">
+		<div class="inner_div" style="width: 379px; height: 880px; border-right: solid 1px black;">
 			<div id="circle"> 29 </div>
 			<div id="status_text" style="font-size: 25px; color: red; font-weight: bold;"></div><br><br>
 			<div class="gray_box" style="background: white; width: 240px; height: 110px;"> PPUPIN(퍼핀)은<br>개인정보수집이용약관이<br>
@@ -60,7 +60,15 @@
 			<font size="5"><b>PPUPIN</b></font>
 		</div>
 		<div class="inner_div" style="width: 930px; height: 640px;">
-			<div class="gray_box" style="width: 800px; height: 270px;">
+			<div>
+				<div style="float: left; text-align: left; margin-left: 55px; margin-bottom: 18px; font-size: 13px;">
+					<div id="cscore" style="font-size: 25px; font-weight: bold;">약관의 완성도 - 30점</div>
+					<font color="gray"><br>약관에 필수적으로 들어가야 할 항목들의 존재 여부로 약관의 완성도를 판단합니다.<br>
+					(2022년 3월 개정된 알기 쉬운 개인정보 처리 동의 안내서 참고)<br>
+					약관 내용이 부실하면 위험 단어의 수가 적어 안전한 약관이라고 판단할 수 있기 때문에 약관의 완성도를 함께 측정하고 있습니다.</font></div>
+				<div style="float: left; text-align: right; font-size: 30px; font-weight: bold;"></div>
+			</div>
+			<div class="gray_box" style="width: 800px; height: 270px; margin-bottom: 20px;">
 				<div style="font-weight: bold;">약관의 완성도</div><hr>
 				<div>
 					<table id="table1" style="width: 800px;">
@@ -91,6 +99,15 @@
 						</tr>
 					</table>
 				</div>
+			</div>
+			<br>
+			<div>
+				<div style="float: left; text-align: left; margin-left: 55px; margin-bottom: 18px; font-size: 13px;">
+					<div id="dscore" style="font-size: 25px; font-weight: bold;">약관의 위험 단어 - 50점</div>
+					<font color="gray"><br>위험 단어는 약관 내 단어 중, 과도한 개인정보를 수집할 가능성이 있는 단어들을 말합니다.<br>
+					(2020년 12월 개정된 개인정보 영향평가 수행 안내서 참고)<br>
+					해당 단어들을 사용자가 약관 동의를 하기 전 다시 한번 점검하게 하여 개인정보보호를 돕고 있습니다.</font></div>
+				<div style="float: left; text-align: right; font-size: 30px; font-weight: bold;"></div>
 			</div>
 			<div class="gray_box" style="width: 800px; height: 270px; overflow-y: scroll; overflow-x: hidden;">
 				<div style="width: 200px; font-weight: bold; float: left;">위험 단어</div>
@@ -220,13 +237,6 @@
 						<tr>
 							<td>맞춤식 서비스</td>
 							<td align="left">X</td>
-						</tr>
-						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td> <!--32-->
-						</tr>
-						<tr>
-							<td colspan="2">'인종, 민족, 종교, 노동 조합, 유전, 정당, 정치, 성생활, 지문, 얼굴, 홍채, 망막, 정맥, 장문, 귓바퀴, 뇌파, 심전도, 유전정보, 음성, 필적, 걸음걸이, 자판 입력'은 민감정보에 해당하는 정보이다. 이용자의 사생활 침해 우려가 있어 해당 프로그램을 사용할 시 실제로 필요한 정보인지 다시 한번 확인이 필요하다.</td>
 						</tr>
 					</table>
 				</div>
