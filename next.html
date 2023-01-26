@@ -38,17 +38,18 @@
 			font-weight: bold;
 			font-size: 30px;
 		}
-		#table2 td {padding: 5px;}
 		img {
 			display : block;
 			margin : auto;
 		}
 		
+		
+		
 	</style>
 </head>
 <body>
-	<div class="main_div" style="width: 1310px; height: 1000px;">
-		<div class="inner_div" style="width: 379px; height: 880px; border-right: solid 1px black;">
+	<div class="main_div" style="width: 1360px; height: 1300px;">
+		<div class="inner_div" style="width: 399px; height: 1200px; border-right: solid 1px black;">
 			<div id="circle"> 29 </div>
 			<div id="status_text" style="font-size: 25px; color: red; font-weight: bold;"></div><br><br>
 			<div class="gray_box" style="background: white; width: 240px; height: 110px;"> PPUPIN(퍼핀)은<br>개인정보수집이용약관이<br>
@@ -59,7 +60,7 @@
 			<img src="logo.png" alt="" height="80">
 			<font size="5"><b>PPUPIN</b></font>
 		</div>
-		<div class="inner_div" style="width: 930px; height: 640px;">
+		<div class="inner_div" style="width: 960px; height: 640px;">
 			<div>
 				<div style="float: left; text-align: left; margin-left: 55px; margin-bottom: 18px; font-size: 13px;">
 					<div id="cscore" style="font-size: 25px; font-weight: bold;">약관의 완성도 - 30점</div>
@@ -68,33 +69,33 @@
 					약관 내용이 부실하면 위험 단어의 수가 적어 안전한 약관이라고 판단할 수 있기 때문에 약관의 완성도를 함께 측정하고 있습니다.</font></div>
 				<div style="float: left; text-align: right; font-size: 30px; font-weight: bold;"></div>
 			</div>
-			<div class="gray_box" style="width: 800px; height: 270px; margin-bottom: 20px;">
+			<div class="gray_box" style="width: 820px; height: 270px; margin-bottom: 20px;">
 				<div style="font-weight: bold;">약관의 완성도</div><hr>
 				<div>
-					<table id="table1" style="width: 800px;">
+					<table id="table1" style="width: 830px;">
 						<tr>
-							<td align="left" width="75%">1. 개인정보 수집 이용동의서가 개인정보처리방침과 별도로 존재하는가?<br> </td>
-							<td width="10%">----------</td>
+							<td align="left" width="78%">1. 개인정보 수집 이용동의서가 개인정보처리방침과 별도로 존재하여 동의를 받는가?<br> </td>
+							<td width="8%">---------</td>
 							<td class="ox">O</td>
 						</tr>
 						<tr>
-							<td align="left">2. 개인정보의 처리 목적이 약관에 구체적으로 정확하게 명시되어있는가?</td>
-							<td>----------</td>
+							<td align="left">2. 개인정보의 수집 목적이 약관에 구체적으로 정확하게 명시되어있는가?</td>
+							<td>---------</td>
 							<td class="ox">X</td>
 						</tr>
 						<tr>
 							<td align="left">3. 개인정보 보유 및 이용기간이 포함되어있는가?</td>
-							<td>----------</td>
+							<td>---------</td>
 							<td class="ox">X</td>
 						</tr>
 						<tr>
 							<td align="left">4. 수집하는 개인정보 항목이 구체적으로 명시되어있는가?</td>
-							<td>----------</td>
+							<td>---------</td>
 							<td class="ox">X</td>
 						</tr>
 						<tr>
-							<td align="left">5. 수집하는 항목 중 고유식별정보(주민등록번호, 여권번호, 운전면허번호,  <br>외국인등록번호)가 없거나, 있을 경우 고유식별정보임을 표기하고 있는가?</td>
-							<td>----------</td>
+							<td align="left">5. 수집하는 항목 중 고유식별정보(주민등록번호, 여권번호, 운전면허번호,  <br>외국인등록번호)가 없거나, 있을 경우 고유식별정보 수집에 따로 동의를 받고 있는가?</td>
+							<td>---------</td>
 							<td class="ox">X</td>
 						</tr>
 					</table>
@@ -109,135 +110,144 @@
 					해당 단어들을 사용자가 약관 동의를 하기 전 다시 한번 점검하게 하여 개인정보보호를 돕고 있습니다.</font></div>
 				<div style="float: left; text-align: right; font-size: 30px; font-weight: bold;"></div>
 			</div>
-			<div class="gray_box" style="width: 800px; height: 270px; overflow-y: scroll; overflow-x: hidden;">
-				<div style="width: 200px; font-weight: bold; float: left;">위험 단어</div>
-				<div style="width: 570px; font-weight: bold; float: left;">이유</div><br><hr>
-				<div>
-					<table id="table2" style="width: 800px;">
+			<div class="gray_box" style="width: 830px; height: 270px; overflow-y: scroll; overflow-x: hidden;">
+				<div style="font-weight: bold;">약관 내 위험 단어와 (해당 문장)</div><hr>
+				<div id="cont" style="text-align: left;"></div>
+			</div>
+			<div class="gray_box" style="width: 830px; height: 270px; overflow-y: scroll; overflow-x: hidden; background: white;">
+				<div id="cont" style="text-align: left;">
+					<table id="table2" style="width: 800px; border: 1px solid #a3a1a1; border-collapse: collapse;">
+						<thead>
+							<tr style="text-align: center;">
+							  <th style="border: 1px solid #a3a1a1; padding: 10px;">위험 단어</th><th>이유</th>
+							</tr>
+						</thead>
+						<tbody>
 						<tr>
-							<td width="25%">위탁</td>
-							<td align="left"></td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td width="25%">제3자 제공</td>
-							<td align="left"></td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>로그</td>
-							<td align="left"></td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>쿠키</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
 						<tr>
-							<td>맞춤식 서비스</td>
-							<td align="left">X</td>
+							<td style="width: 25%; border: 1px solid #a3a1a1; padding: 10px;">위탁</td>
+							<td style="border: 1px solid #a3a1a1; padding: 10px;"></td>
 						</tr>
+						</tbody>
 					</table>
 				</div>
 			</div>
