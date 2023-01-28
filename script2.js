@@ -68,12 +68,12 @@ if(localStorage.getItem('s5') == 20){
 	r5 = 'O';
 }
 
-if(score<=30) {
+if(score<=45) {
 	document.getElementById("circle").style.borderColor = "#EB274C";
 	document.getElementById("status_text").style.color = "#EB274C";
 	document.getElementById("status_text").innerText = "위험";
 }
-else if(score<=70) {
+else if(score<=80) {
 	document.getElementById("circle").style.borderColor = "#FFC041";
 	document.getElementById("status_text").style.color = "#FFC041";
 	document.getElementById("status_text").innerText = "경고";

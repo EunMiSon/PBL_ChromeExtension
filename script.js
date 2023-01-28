@@ -312,10 +312,10 @@
 
 		var score = cscore + dscore;
 		
-		if(score<=30) {
+		if(score<=45) {
 			document.getElementById("circle").style.borderColor = "#EB274C";
 		}
-		else if(score<=74) {
+		else if(score<=80) {
 			document.getElementById("circle").style.borderColor = "#FFC041";
 		}
 		else {
