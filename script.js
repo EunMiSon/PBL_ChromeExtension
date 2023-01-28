@@ -315,7 +315,7 @@
 		if(score<=30) {
 			document.getElementById("circle").style.borderColor = "#EB274C";
 		}
-		else if(score<=70) {
+		else if(score<=74) {
 			document.getElementById("circle").style.borderColor = "#FFC041";
 		}
 		else {
