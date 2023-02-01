@@ -6,8 +6,8 @@ var r5 = 'X';
 
 var score = localStorage.getItem('score');
 
-var cscoreText = "약관의 완성도 - " + localStorage.getItem('cscore') + "점";
-var dscoreText = "약관의 위험 단어 - " + localStorage.getItem('dscore') + "점";
+var cscoreText = "동의서의 완성도 - " + localStorage.getItem('cscore') + "점";
+var dscoreText = "동의서의 위험 단어 - " + localStorage.getItem('dscore') + "점";
 
 document.querySelector('#cont').innerText = localStorage.getItem('keyText');
 
@@ -98,15 +98,3 @@ for(var i = 1; i < words.length; i++){
 	document.getElementById("table2").getElementsByTagName("tr")[i].getElementsByTagName("td")[0].innerHTML = words[i];
 	document.getElementById("table2").getElementsByTagName("tr")[i].getElementsByTagName("td")[1].innerHTML = reasons[i];
 }
-
-// document.write('<table style="width: 800px;">');
-// for (var i = 0; i < words.length; i++) {
-//   document.write('<tr>');
-//   for (var j = 0; j < 2; j++)  {
-//     document.write('<td>');
-//     document.write(i + ", " + j);
-//     document.write('</td>');
-//   }
-//   document.write('</tr>')
-// }
-// document.write('</table>');
