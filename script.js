@@ -15,48 +15,41 @@
 		var bt_com = result[0].replace(regex, ''); // 완성도 단어 필터링용 띄어쓰기X 텍스트 -> 원본에서 띄어쓰기 제거
 		
 		/* 동의서의 완성도(구체성) 평가 */
-		// 첫항목의 단어가 없으면 == s1이 0이면 이용동의가 없는 것 -> O/X 하려고 s1~s5로 따로 나눔
-		// 기본 0점으로 시작하여 단어가 없는게 아니면(있으면) 20점으로
+		// 첫항목의 단어가 없으면 == s1이 0이면 이용동의가 없는 것 -> O/X 하려고 s1~s4로 따로 나눔
+		// 기본 0점으로 시작하여 단어가 없는게 아니면(있으면) 25점으로
 
 		var s1 = 0;  // 1.개인정보 수집 이용 동의서 존재 여부 점수
 		var s2 = 0;  // 2.개인정보의 처리 목적 여부 점수
 		var s3 = 0;  // 3.개인정보의 처리 및 보유 기간 여부 점수
 		var s4 = 0;  // 4.처리하는 개인정보의 항목 여부 점수
-		var s5 = 0;  // 5.동의 불이익 명시 내용 점수 
 		var r1 = 'O';
 		var r2 = 'O';
 		var r3 = 'O';
 		var r4 = 'O';
-		var r5 = 'O';
 
 		if(bt_com.match(/개인정보수집및이용|개인정보이용및수집|개인정보수집·이용|개인정보수집이용|개인정보 수집\/이용|개인정보수집및서비스활용|개인정보항목수집및이용|개인정보수집동의|개인정보의수집목적및이용|개인정보수집,이용|개인정보수집처리|개인정보수집및처리|개인정보수집·처리/g) != null)
 		{
-			s1 = 20;
+			s1 = 25;
 		}else{
 			r1 = "X";
 		}
 		if(bt_com.match(/목적|이용목적|개인정보수집이용목적|개인정보수집및이용목적|수집목적|처리목적|수집및이용목적|수집·이용목적|수집•이용목적|수집\/이용 목적|개인정보의처리목적|왜그리고어떻게귀하의개인정보를이용|개인정보의수집이용목적|개인정보의수집목적및이용목적|개인정보수집목적|개인정보수집,이용목적|수집하는개인정보및이용목적|수집하는개인정보항목및이용목적|개인정보의수집및이용목적|개인정보의수집,이용목적|개인정보수집,이용항목및목적|수집하는개인정보항목,목적|수집한개인정보의이용/g) != null){
-			s2 = 20;
+			s2 = 25;
 		}else{
 			r2 = "X";
 		}
 		if(bt_com.match(/이용기간|보관|개인정보의보유|처리및이용기간|수집및보유기간|개인정보의처리및보유기간|이용및보유기간|처리및보유기간|개인정보보유및이용기간|개인정보의보유및이용기간|개인정보이용기간및파기|개인정보보유기간|개인정보이용기간|개인정보의이용기간및파기|보유기간|보유\/이용기간|보유·이용기간|보유및이용기간/g) != null){
-			s3 = 20;
+			s3 = 25;
 		}else{
 			r3 = "X";
 		}
 		if(bt_com.match(/항목|수집\/활용항목|수집·이용할항목|수집및이용항목|수집이용항목|개인정보의수집항목|개인정보수집항목|개인정보는무엇이고|제공정보|개인정보의항목|개인정보항목|수집하는개인정보의항목|수집항목|수집하는개인정보항목|회사가수집하는개인정보항목|회원가입시수집하는정보|수집하는개인정보의항목및수집방법|수집하는개인정보항목,목적|수집하는항목|처리하는개인정보항목|처리하는개인정보의항목|수집·이용하는개인정보의항목/g) != null){
-			s4 = 20;
+			s4 = 25;
 		}else{
 			r4 = "X";
 		}
-		if(bt_com.match(/동의를거부|동의거부|동의를하지않을수|동의하지않을수|동의하지않으실수|이용동의는거부|동의하지않으실|개인정보수집및이용에대해서는거부|동의를해주셔야만서비스를이용|이용동의에거부|선택정보를입력하지않은경우에도서비스이용에는제한이없습니다.|거부시에는서비스이용이불가|미동의하시는경우에도가입및서비스이용이가능/g) != null){
-			s5 = 20;  // 동의거부가 있으면 20점
-		}else{
-			r5 = "X";
-		}
 
-		var cscore = s1 + s2 + s3 + s4 + s5; // 완성도 점수
+		var cscore = s1 + s2 + s3 + s4; // 완성도 점수
 
 		/* 동의서의 위험 단어 평가 */
 
@@ -328,7 +321,6 @@
 		document.getElementById("table1").getElementsByTagName("tr")[1].getElementsByTagName("td")[1].innerHTML = r2;
 		document.getElementById("table1").getElementsByTagName("tr")[2].getElementsByTagName("td")[1].innerHTML = r3;
 		document.getElementById("table1").getElementsByTagName("tr")[3].getElementsByTagName("td")[1].innerHTML = r4;
-		document.getElementById("table1").getElementsByTagName("tr")[4].getElementsByTagName("td")[1].innerHTML = r5;
 
 		document.querySelector('#cont4').innerText = popupText;
 
@@ -344,9 +336,9 @@
 		localStorage.setItem('s2',s2);
 		localStorage.setItem('s3',s3);
 		localStorage.setItem('s4',s4);
-		localStorage.setItem('s5',s5);
 		localStorage.setItem('score', score);
 		localStorage.setItem('cscore', cscore);
 		localStorage.setItem('dscore', -(dscore));
 
 	  });
+	  

@@ -2,7 +2,6 @@ var r1 = 'X';
 var r2 = 'X';
 var r3 = 'X';
 var r4 = 'X';
-var r5 = 'X';
 
 var score = localStorage.getItem('score');
 
@@ -52,20 +51,17 @@ var reasons = ['이 항목들은 고유식별정보에 해당하거나 고유식
 				'서비스 제공자가 업무 제휴, 공동 마케팅 등을 위해 개인정보를 외부의 제3자에게 제공할 수 있습니다.',
 				'자신의 SNS 계정을 알리는 것을 원하지 않는다면 개인정보 제공 동의를 재고해야 합니다.'];
 
-if(localStorage.getItem('s1') == 20){
+if(localStorage.getItem('s1') == 25){
 	r1 = 'O';
 }
-if(localStorage.getItem('s2') == 20){
+if(localStorage.getItem('s2') == 25){
 	r2 = 'O';
 }
-if(localStorage.getItem('s3') == 20){
+if(localStorage.getItem('s3') == 25){
 	r3 = 'O';
 }
-if(localStorage.getItem('s4') == 20){
+if(localStorage.getItem('s4') == 25){
 	r4 = 'O';
-}
-if(localStorage.getItem('s5') == 20){
-	r5 = 'O';
 }
 
 if(score<=45) {
@@ -92,7 +88,6 @@ document.getElementById("table1").getElementsByTagName("tr")[0].getElementsByTag
 document.getElementById("table1").getElementsByTagName("tr")[1].getElementsByTagName("td")[2].innerHTML = r2;
 document.getElementById("table1").getElementsByTagName("tr")[2].getElementsByTagName("td")[2].innerHTML = r3;
 document.getElementById("table1").getElementsByTagName("tr")[3].getElementsByTagName("td")[2].innerHTML = r4;
-document.getElementById("table1").getElementsByTagName("tr")[4].getElementsByTagName("td")[2].innerHTML = r5;
 
 for(var i = 1; i < words.length; i++){
 	document.getElementById("table2").getElementsByTagName("tr")[i].getElementsByTagName("td")[0].innerHTML = words[i];
